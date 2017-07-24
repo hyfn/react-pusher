@@ -1,10 +1,11 @@
-import React, { Component, PropTypes as T } from 'react';
+import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Pusher extends Component {
   static propTypes = {
-    channel: T.string.isRequired,
-    onUpdate: T.func.isRequired,
-    event: T.string.isRequired,
+    channel: PropTypes.string.isRequired,
+    onUpdate: PropTypes.func.isRequired,
+    event: PropTypes.string.isRequired,
   };
 
   static pusherClient = null;
@@ -56,7 +57,7 @@ export default class Pusher extends Component {
   _channel = null;
 
   render() {
-    return <noscript />;
+    return null;
   }
 }
 
